@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #fafafa; */
+    background-color: #f2f2f2;
+}
+
+aside, main, nav {
+    padding: 10px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Comfortaa', cursive;
+}
+
+a, a:visited, a:hover, a:link {
+    /* font-weight: 600; */
+    /* text-decoration: none; */
+    color: rgb(44, 105, 155);
+}
+
+a:hover {
+    color: #777;
+}
+
+button.link {
+    color: rgb(44, 105, 155);
+    background-color: transparent;
+    border-width: 0px;
+}
+
+button.link:hover {
+    color: #777;
+}
+
+button.link.following {
+    padding: 5px 10px !important;
+}
+
+button.link.following.active {
+    background-color: white;
+    padding: 5px 10px !important;
+    border: solid 1px #CCC;
+    border-radius: 4px;
+}
+
+header {
+    margin-top: 20px;
+}
+
+nav {
+    position: sticky;
+    height: 70px;
+    width: 100vw;
+    background-color: white;
+    border-bottom: solid #dbdbdb 1px;
+    left: 0px;
+    top: 0px;
+    padding: 0px 3vw;
+    z-index: 1;
+}
+
+nav, nav ul, .card .header, .card .buttons, .card .add-comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+li {
+    margin-left: 30px;
+}
+
+aside {
+    position: fixed;
+    right: 0px;
+    top: 70px;
+    width: calc(40vw - 6px);
+    /* background-color: #fafafa; */
+    background-color: #f2f2f2;
+    height: calc(100vh - 50px);
+    padding-left: 30px;
+}
+
+main {
+    /* margin-top: 70px; */
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#posts {
+    width: 50vw;
+}
+
+.stories {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 50vw;
+    min-width: 540px;
+    border: solid 1px #dbdbdb;
+    margin-bottom: 30px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.stories > div {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stories > div .pic {
+    min-width: 50px;
+    min-height: 50px;
+    border: solid 3px #dbdbdb;
+    border-radius: 27px;
+}
+
+.stories p {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 0.80em;
+    color: #999;
+    width: 66px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+/* .card {
+    border: solid 1px #dbdbdb;
+    margin-bottom: 30px;
+    background-color: #fff;
+    width: 50vw;
+    min-width: 540px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .header, .card .info {
+    padding: 10px;
+    color: #444;
+}
+
+.card .buttons {
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+.card .buttons i {
+    margin-right: 4px;
+}
+
+.card  button.link {
+    font-size: 1em;
+}
+
+.card .caption, .card .comments, .likes {
+    padding: 0px 5px;
+}
+
+.card .caption p, .card .comments p {
+    margin: 8px 0px 3px 0px;
+    font-size: 0.9em;
+}
+
+.card .timestamp {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 0.70em !important;
+    margin-bottom: 5px;
+}
+
+.card .add-comment {
+    border-top: solid 1px #dbdbdb;
+    padding: 10px 15px;
+}
+
+.card .add-comment .input-holder {
+    width: 90%;
+}
+
+.card .add-comment input, .card .add-comment input:focus, .card .add-comment input:focus-visible {
+    border-width: 0px;
+    outline: none;
+    font-size: 0.95em;
+    width: 85%;
+    padding: 10px 0px;
+}
+
+.card .add-comment i {
+    font-size: 1.3em;
+    margin-right: 10px;
+} */
+
+.suggestion-text {
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.suggestions section {
+    display: grid;
+    grid-template-columns: 35px 2fr 1fr;
+    align-items: center;
+    width: 25vw;
+}
+
+.suggestions section > div {
+    padding: 8px;
+    width: 200px;
+}
+
+.suggestions section p, .suggestions section a {
+    margin: 0px;
+}
+
+.suggestions section p {
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.suggestions section a {
+    font-size: 0.8em;
+}
+
+.suggestions section p:nth-child(2) {
+    color: #666;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.suggestions section .pic {
+    min-width: 30px;
+    min-height: 30px;
+    border: solid 1px #dbdbdb;
+    border-radius: 15px;
+}
+
+.suggestion button {
+    font-size: 1em;
+    color: #3066ad;
+}
+
+#user {
+    display: flex;
+    height: 100px;
+    padding: 5px;
+    padding-left: 0;
+}
+
+#user > div {
+    display: flex;
+    padding: 5px;
+    padding-left: 0;
+}
+
+#user-pic {
+    border-radius: 100%;
+    width: 80px;
+}
+
+#user h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.follow {
+    background-color: #f2f2f2;
+    padding: 4px 8px;
+    border: none;
+}
+
+.unfollow {
+    background-color: white;
+    padding: 4px 8px;
+    border: solid 1px white;
+    border-radius: 4px;
+}
+
+.card {
+    background-color: white;
+    /* margin: 16px 40% 12px 19%; */
+    border: solid 1px #dbdbdb;
+    margin-bottom: 30px;
+    width: 50vw;
+    min-width: 540px;
+}
+
+.card > img {
+    width: 100%;
+}
+
+.card > p {
+    font-size: 14px;
+    margin: 5px 15px 12px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+.card-icons div {
+    display: flex;
+    justify-content: space-between;
+    width: 85px;
+}
+
+.icon-button {
+    background-color: white;
+    border: none;
+    padding: 2px;
+    transform: scale(1.5);
+}
+
+.card-text-bold {
+    font-weight: bold;
+}
+
+.card a {
+    color: #3873c0;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.card .view-more-comments {
+    background-color: white;
+    color: #3873c0;
+    font-weight: lighter;
+    font-size: 14px;
+    border: none;
+}
+
+.view-more-comments {
+    margin-left: 6px;
+}
+
+.post-date > span {
+    color: #6c6c6c;
+    font-size: 12px;
+}
+
+.card-add-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-top: solid 1px #ddd;
+}
+
+.card-add-comment > div {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 98%;
+}
+
+.card-add-comment input, .card-add-comment input:focus, .card-add-comment input:focus-visible {
+    width: 100%;
+    border-width: 0px;
+    outline: none;
+    font-size: 0.95em;
+    padding: 10px 0px;
+    margin: 0 10px;
+}
+
+.card-add-comment button {
+    background-color: white;
+    color: #3066ad;
+    border: none;
+    transform: scale(1.1);
+}
+
+.unlike-post {
+    color: red;
+}
+
+.modal-bg {
+    background: rgba(50, 50, 50, 0.8);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal {
+    width: 80vw;
+    height: auto;
+    max-height: 80vh;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.close {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    transform: scale(3.5);
+    top: 30px;
+    right: 30px;
+    margin: 0;
+    border: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal-body {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-pic {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 70%;
+}
+
+.modal-comments {
+    width: 28%;
+    margin-right: 2%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-content: flex-start;
+    padding: 10px;
+    align-items: center;
+    border-bottom: solid 1px #CCC;
+}
+
+.row > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.modal-profile-pics {
+    border-radius: 100%;
+    transform: scale(1.6);
+    padding: 20px;
+}
+
+.stop-scroll {
+    overflow-y: hidden;
+}
+
+.post-profile {
+    display: flex;
+    position: sticky;
+    top: 0;
+    right: 0;
+    height: 70px;
+    padding: 5px;
+    padding-left: 20px;
+    background-color: white;
+    border-bottom: solid 1px #CCC;
+    z-index: 1;
+}
+
+/* #user {
+    display: flex;
+    height: 100px;
+    padding: 5px;
+    padding-left: 0;
+}
+
+#user > div {
+    display: flex;
+    padding: 5px;
+    padding-left: 0;
+}
+
+#user-pic {
+    border-radius: 100%;
+    width: 80px;
+}
+
+#user h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+} */
+
+.post-profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.post-profile > p {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+aside header {
+    display: flex;
+    align-items: center;
+    width: 25vw;
+}
+
+aside header .pic {
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 33px;
+    border-width: 0px;
+    margin-right: 20px;
+}
+
+.visuallyhidden {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        width: 100vw;
+        padding: 0px;
+        align-items: center;
+    }
+    
+    #posts, .stories {
+        width: 75vw;
+        min-width: auto;
+    }
+
+    #posts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    #posts, .stories {
+        width: 90vw;
+    }
+
+    .card {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 20px;
+    }
+}

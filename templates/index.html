@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Photo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    {% include 'includes/navbar.html' %}
+
+    <section id="page-body">
+        {% include 'includes/suggestions.html' %}
+
+        {% include 'includes/stories.html' %}
+
+        {% include 'includes/cards.html' %}
+    </section>
+</body>
+</html>
+
+
+<!-- 
+    Requirement 6 Part C:
+    When a user is posting an image, I would add a box beneath the "write caption" box that allows the user to add alt-text to the image they are posting. This way, the option to add alt-text is very visible to users and they can easily add alt-text to their images.
+-->

@@ -1,0 +1,26 @@
+<section class="rec-panel">
+    <div id="user">
+        <div>
+            <img src="{{ user['image_url'] }}" alt="{{ user['username'] }}'s profile picture" id="user-pic">
+        </div>
+        <h2>{{ user['username'] }}</h2>
+    </div>
+
+    <div id="recommendations">
+        <p class="light-text" id="suggestions-text">Suggestions for you</p>
+        
+        {% for suggestion in suggestions %}
+            <div class="recommended-user">
+                <div>
+                    <img src="{{ suggestion['image_url'] }}" alt="{{ suggestion['username'] }}'s profile picture" class="rec-pic">
+                </div>
+                <div class="rec-user">
+                    <p>{{ suggestion['username'] }}</p>
+                    <p class="light-text">suggested for you</p>
+                </div>
+                <p class="follow-text"><a href="#">follow</a></p>
+            </div>
+        {% endfor %}
+
+    </div>
+</section>

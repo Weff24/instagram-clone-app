@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa', cursive;
+}
+
+a, a:link, a:hover, a:visited {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-text {
+    font-weight: bold;
+    display: inline-block;
+}
+
+#sign-out {
+    color: #3066ad;
+}
+
+nav, nav ul, nav li, nav .navbar-text {
+    /* //////////////////////////// border: solid 1px black; //////////////////////////// */
+    padding: 5px 5px;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100vw;
+    padding: 8px 35px;
+    background-color: white;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+nav ul, nav li, nav h1 {
+    margin: 0;
+}
+
+#page-body {
+    margin-top: 59px;
+    padding: 8px;
+    background-color: #eee;
+}
+
+.rec-panel * {
+    /* //////////////////////////// border: solid 1px black; //////////////////////////// */
+}
+
+.rec-panel {
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    margin-left: 62%;
+    background-color: #eee
+}
+
+#user {
+    display: flex;
+    height: 100px;
+    padding: 5px;
+}
+
+#user > div {
+    display: flex;
+    padding: 5px;
+}
+
+#user-pic {
+    border-radius: 100%;
+    width: 80px;
+}
+
+#user h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+#suggestions-text {
+    height: 20px;
+    margin: 10px 10px;
+    font-weight: bold;
+}
+
+.recommended-user {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    margin: 2px 50px 2px 0;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.rec-pic {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+.rec-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50px;
+    width: 190px;
+    padding: 5px 5px;
+}
+
+.rec-user p {
+    margin: 0px;
+}
+
+.light-text {
+    color: #6c6c6c;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.follow-text a {
+    color: #3066ad;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.stories-panel {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    /* height: 100px; */
+    margin: 8px 40% 0 19%;
+    padding: 2px 5px;
+    overflow: hidden;
+}
+
+.stories-panel, .stories-panel * { 
+    /* //////////////////////////// border: solid 1px black; //////////////////////////// */
+}
+
+.one-story {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
+    margin: 5px;
+}
+
+.story-pic {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: solid 3px #ddd;
+}
+
+.one-story p {
+    font-size: 14px;
+    width: 80px;
+    color: #6c6c6c;
+    text-align: center;
+    margin: 3px 0 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card {
+    background-color: white;
+    margin: 16px 40% 12px 19%;
+    border: solid 2px #ddd;
+}
+
+.card > img {
+    width: 100%;
+}
+
+.card > p {
+    font-size: 14px;
+    margin: 5px 15px 12px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+.card-text-bold {
+    font-weight: bold;
+}
+
+.card a {
+    color: #3873c0;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.view-more-comments {
+    margin-left: 6px;
+}
+
+.post-date > span {
+    color: #6c6c6c;
+    font-size: 12px;
+}
+
+.card-add-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-top: solid 1px #ddd;
+}
+
+.card-add-comment > div {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 90%;
+}
+
+.card-add-comment input {
+    width: 80%;
+    padding: 6px;
+    margin-right: 10px;
+    border: none;
+}
+
+.card-add-comment i {
+    margin: 0 5px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .stories-panel, .card{
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .rec-panel {
+        display: none;
+    }
+
+    .stories-panel, .card{
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+}
+
